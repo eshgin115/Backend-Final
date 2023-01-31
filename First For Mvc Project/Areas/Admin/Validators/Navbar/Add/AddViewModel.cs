@@ -1,7 +1,7 @@
-﻿using First_For_Mvc_Project.Areas.Admin.ViewModels.Navbar;
+﻿using Pronia.Areas.Admin.ViewModels.Navbar;
 using FluentValidation;
 
-namespace First_For_Mvc_Project.Areas.Admin.Validators.Navbar.Add
+namespace Pronia.Areas.Admin.Validators.Navbar.Add
 {
     public class AddViewModelValidator : AbstractValidator<AddViewModel>
     {

@@ -1,6 +1,6 @@
-﻿using First_For_Mvc_Project.Database.Models;
+﻿using Pronia.Database.Models;
 
-namespace First_For_Mvc_Project.Services.Concretes
+namespace Pronia.Services.Concretes
 {
     public interface IUserActivationService
     {

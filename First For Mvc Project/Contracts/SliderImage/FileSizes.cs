@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Contracts.SliderImage
+﻿namespace Pronia.Contracts.SliderImage
 {
     public enum FileSizes
     {

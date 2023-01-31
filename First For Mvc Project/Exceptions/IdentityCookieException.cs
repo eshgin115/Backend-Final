@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Exceptions
+﻿namespace Pronia.Exceptions
 {
     public class IdentityCookieException : ApplicationException
     {

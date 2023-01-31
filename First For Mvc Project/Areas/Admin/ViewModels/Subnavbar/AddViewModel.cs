@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.Subnavbar
+﻿namespace Pronia.Areas.Admin.ViewModels.Subnavbar
 {
     public class AddViewModel
     {

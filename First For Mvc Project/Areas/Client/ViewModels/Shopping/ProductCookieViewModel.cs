@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Client.ViewModels.Shopping
+﻿namespace Pronia.Areas.Client.ViewModels.Shopping
 {
     public class ProductCookieViewModel
     {

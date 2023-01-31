@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 
-namespace First_For_Mvc_Project.Areas.Admin.Hubs
+namespace Pronia.Areas.Admin.Hubs
 {
     [Authorize(Roles ="admin")]
     public class AlertHub : Hub

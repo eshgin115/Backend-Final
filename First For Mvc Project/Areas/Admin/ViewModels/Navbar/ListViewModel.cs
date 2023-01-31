@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.Navbar
+﻿namespace Pronia.Areas.Admin.ViewModels.Navbar
 {
     public class ListViewModel
     {

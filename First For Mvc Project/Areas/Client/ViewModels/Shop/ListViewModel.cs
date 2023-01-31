@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Client.ViewModels.Shop
+﻿namespace Pronia.Areas.Client.ViewModels.Shop
 {
     public class ListViewModel
     {

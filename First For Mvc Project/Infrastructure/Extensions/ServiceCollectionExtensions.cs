@@ -1,8 +1,8 @@
 ﻿using AspNetCore.IServiceCollection.AddIUrlHelper;
-using First_For_Mvc_Project.Infrastructure.Configurations;
+using Pronia.Infrastructure.Configurations;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace First_For_Mvc_Project.Infrastructure.Extensions
+namespace Pronia.Infrastructure.Extensions
 {
     public static class ServiceCollectionExtensions
     {

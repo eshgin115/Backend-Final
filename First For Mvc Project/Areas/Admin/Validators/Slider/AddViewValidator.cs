@@ -1,9 +1,9 @@
-﻿using First_For_Mvc_Project.Areas.Admin.ViewModels.Slider;
-using First_For_Mvc_Project.Contracts.SliderImage;
-using First_For_Mvc_Project.Validators;
+﻿using Pronia.Areas.Admin.ViewModels.Slider;
+using Pronia.Contracts.SliderImage;
+using Pronia.Validators;
 using FluentValidation;
 
-namespace First_For_Mvc_Project.Areas.Admin.Validators.Slider
+namespace Pronia.Areas.Admin.Validators.Slider
 {
     public class AddViewModelValidator :   AbstractValidator<AddViewModel>
     {

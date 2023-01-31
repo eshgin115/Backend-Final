@@ -1,9 +1,9 @@
-﻿using First_For_Mvc_Project.Contracts.Identity;
-using First_For_Mvc_Project.Database.Models;
+﻿using Pronia.Contracts.Identity;
+using Pronia.Database.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace First_For_Mvc_Project.Database.Configurations
+namespace Pronia.Database.Configurations
 {
     public class RoleConfigurations : IEntityTypeConfiguration<Role>
     {

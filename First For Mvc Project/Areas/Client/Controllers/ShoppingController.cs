@@ -1,15 +1,15 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewComponents;
-using First_For_Mvc_Project.Areas.Client.ViewModels.Basket;
-using First_For_Mvc_Project.Areas.Client.ViewModels.Product;
-using First_For_Mvc_Project.Areas.Client.ViewModels.Shopping;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewComponents;
+using Pronia.Areas.Client.ViewModels.Basket;
+using Pronia.Areas.Client.ViewModels.Product;
+using Pronia.Areas.Client.ViewModels.Shopping;
+using Pronia.Database;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
-namespace First_For_Mvc_Project.Areas.Client.Controllers
+namespace Pronia.Areas.Client.Controllers
 {
     [Area("client")]
     [Route("shopping")]

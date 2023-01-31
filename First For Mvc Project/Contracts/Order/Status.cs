@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Contracts.Order
+﻿namespace Pronia.Contracts.Order
 {
     public enum Status
     {

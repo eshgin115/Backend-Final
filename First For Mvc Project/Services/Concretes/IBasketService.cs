@@ -1,8 +1,8 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Basket;
-using First_For_Mvc_Project.Areas.Client.ViewModels.Product;
-using First_For_Mvc_Project.Database.Models;
+﻿using Pronia.Areas.Client.ViewModels.Basket;
+using Pronia.Areas.Client.ViewModels.Product;
+using Pronia.Database.Models;
 
-namespace First_For_Mvc_Project.Services.Concretes
+namespace Pronia.Services.Concretes
 {
     public interface IBasketService
     {

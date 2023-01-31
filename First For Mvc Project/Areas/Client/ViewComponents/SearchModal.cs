@@ -1,8 +1,8 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Shop;
-using First_For_Mvc_Project.Database;
+﻿using Pronia.Areas.Client.ViewModels.Shop;
+using Pronia.Database;
 using Microsoft.AspNetCore.Mvc;
 
-namespace First_For_Mvc_Project.Areas.Client.ViewComponents
+namespace Pronia.Areas.Client.ViewComponents
 {
     public class SearchModal : ViewComponent
     {

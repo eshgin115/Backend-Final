@@ -1,6 +1,6 @@
-﻿using First_For_Mvc_Project.Database.Models.Common;
+﻿using Pronia.Database.Models.Common;
 
-namespace First_For_Mvc_Project.Database.Models
+namespace Pronia.Database.Models
 {
     public class Size :BaseEntity<int>
     {

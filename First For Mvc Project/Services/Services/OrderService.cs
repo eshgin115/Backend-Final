@@ -1,11 +1,11 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Shopping;
-using First_For_Mvc_Project.Contracts.Order;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Database.Models;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewModels.Shopping;
+using Pronia.Contracts.Order;
+using Pronia.Database;
+using Pronia.Database.Models;
+using Pronia.Services.Concretes;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Services.Services
+namespace Pronia.Services.Services
 {
     public class OrderService : IOrderService
     {

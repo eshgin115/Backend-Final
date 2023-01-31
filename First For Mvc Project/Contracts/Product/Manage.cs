@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Contracts.Product
+﻿namespace Pronia.Contracts.Product
 {
     public class Manage
     {

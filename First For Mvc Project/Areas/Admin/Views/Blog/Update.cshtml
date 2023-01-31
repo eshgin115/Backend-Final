@@ -13,7 +13,7 @@
                        
                         <div class="form-group">
                             <label>TagIds</label>
-                            <select asp-for="TagIds" asp-items="@(new SelectList(Model.Tags, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Tag.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Tag.ListViewModel.Name)))" class="form-select">                            </select>
+                            <select asp-for="TagIds" asp-items="@(new SelectList(Model.Tags, nameof(Pronia.Areas.Admin.ViewModels.Tag.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Tag.ListViewModel.Name)))" class="form-select">                            </select>
                             <span asp-validation-for="TagIds" class="text-danger"></span>
                         </div>
                       

@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.BlogVideo
+﻿namespace Pronia.Areas.Admin.ViewModels.BlogVideo
 {
     public class BlogVideosViewModel
     {

@@ -1,7 +1,7 @@
-﻿using First_For_Mvc_Project.Contracts.SliderImage;
+﻿using Pronia.Contracts.SliderImage;
 using FluentValidation;
 
-namespace First_For_Mvc_Project.Validators
+namespace Pronia.Validators
 {
     public class FileValidator : AbstractValidator<IFormFile>
     {

@@ -1,5 +1,5 @@
-﻿@using First_For_Mvc_Project.Areas.Client.ViewComponents
-@using First_For_Mvc_Project.Areas.Client.ViewModels.Product
+﻿@using Pronia.Areas.Client.ViewComponents
+@using Pronia.Areas.Client.ViewModels.Product
 @model ModalViewModel
 
 
@@ -76,7 +76,7 @@
                     </div>
                     <div class="selector-wrap color-option">
                         <span class="selector-title border-bottom-0">Color</span>
-                        <select asp-for="ColorId" asp-items="@(new SelectList(Model.Colors, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Color.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Color.ListViewModel.Name)))" class="form-select">
+                        <select asp-for="ColorId" asp-items="@(new SelectList(Model.Colors, nameof(Pronia.Areas.Admin.ViewModels.Color.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Color.ListViewModel.Name)))" class="form-select">
                             </select>
 
                     </div>
@@ -86,7 +86,7 @@
                         {
                         <option value="@item.Id">@item.Name</option>
                         }*@
-                        <select asp-for="SizeId" asp-items="@(new SelectList(Model.Sizes, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Size.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Size.ListViewModel.Name)))" class="form-select"> 
+                        <select asp-for="SizeId" asp-items="@(new SelectList(Model.Sizes, nameof(Pronia.Areas.Admin.ViewModels.Size.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Size.ListViewModel.Name)))" class="form-select"> 
                             </select>
                     </div>
 

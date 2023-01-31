@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace First_For_Mvc_Project.Areas.Client.ViewModels.Authentication
+namespace Pronia.Areas.Client.ViewModels.Authentication
 {
     public class RegisterViewModel
     {

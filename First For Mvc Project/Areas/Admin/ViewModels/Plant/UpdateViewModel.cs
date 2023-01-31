@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.Plant
+﻿namespace Pronia.Areas.Admin.ViewModels.Plant
 {
     public class UpdateViewModel
     {

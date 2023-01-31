@@ -1,8 +1,8 @@
-﻿using First_For_Mvc_Project.Attributs;
-using First_For_Mvc_Project.Services.Concretes;
-using First_For_Mvc_Project.Services.Services;
+﻿using Pronia.Attributs;
+using Pronia.Services.Concretes;
+using Pronia.Services.Services;
 
-namespace First_For_Mvc_Project.Infrastructure.Configurations
+namespace Pronia.Infrastructure.Configurations
 {
     public static class RegisterCustomServicesConfigurations
     {

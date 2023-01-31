@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-namespace First_For_Mvc_Project.Extensions
+namespace Pronia.Extensions
 {
     public static class ModelBuilderExtensions
     {

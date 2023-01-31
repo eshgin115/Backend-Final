@@ -1,6 +1,6 @@
-﻿using First_For_Mvc_Project.Areas.Admin.Hubs;
+﻿using Pronia.Areas.Admin.Hubs;
 
-namespace First_For_Mvc_Project.Infrastructure.Extensions
+namespace Pronia.Infrastructure.Extensions
 {
     public static class AppBuilderExtensions
     {

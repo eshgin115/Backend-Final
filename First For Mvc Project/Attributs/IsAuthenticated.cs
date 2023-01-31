@@ -1,8 +1,8 @@
-﻿using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace First_For_Mvc_Project.Attributs
+namespace Pronia.Attributs
 {
 
     public class IsAuthenticated : ActionFilterAttribute, IActionFilter

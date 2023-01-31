@@ -1,10 +1,10 @@
-﻿using First_For_Mvc_Project.Areas.Admin.ViewModels.Navbar;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Database.Models;
+﻿using Pronia.Areas.Admin.ViewModels.Navbar;
+using Pronia.Database;
+using Pronia.Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Areas.Admin.Controllers
+namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("navbar")]

@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.PlantImage
+﻿namespace Pronia.Areas.Admin.ViewModels.PlantImage
 {
     public class BlogImagesViewModel
     {

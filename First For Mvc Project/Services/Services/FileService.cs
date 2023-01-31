@@ -1,7 +1,7 @@
-﻿using First_For_Mvc_Project.Contracts.File;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Contracts.File;
+using Pronia.Services.Concretes;
 
-namespace First_For_Mvc_Project.Services.Services
+namespace Pronia.Services.Services
 {
     public class FileService : IFileService
     {

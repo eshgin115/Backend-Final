@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Contracts.Email
+﻿namespace Pronia.Contracts.Email
 {
     public class EmailMessages
     {

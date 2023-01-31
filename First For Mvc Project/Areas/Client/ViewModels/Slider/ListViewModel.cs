@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Client.ViewModels.Slider
+﻿namespace Pronia.Areas.Client.ViewModels.Slider
 {
     public class ListViewModel
     {

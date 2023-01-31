@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.PaymentBenefits
+﻿namespace Pronia.Areas.Admin.ViewModels.PaymentBenefits
 {
     public class AddViewModel
     {

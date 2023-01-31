@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Contracts.File
+﻿namespace Pronia.Contracts.File
 {
     public enum UploadDirectory
     {

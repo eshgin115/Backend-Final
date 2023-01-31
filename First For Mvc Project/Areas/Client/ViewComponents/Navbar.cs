@@ -1,10 +1,10 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Navbar;
-using First_For_Mvc_Project.Database;
+﻿using Pronia.Areas.Client.ViewModels.Navbar;
+using Pronia.Database;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace First_For_Mvc_Project.Areas.Client.ViewComponents
+namespace Pronia.Areas.Client.ViewComponents
 {
     public class Navbar : ViewComponent
     {

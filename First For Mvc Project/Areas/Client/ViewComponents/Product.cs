@@ -1,13 +1,13 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Product;
-using First_For_Mvc_Project.Contracts.File;
-using First_For_Mvc_Project.Contracts.Product;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewModels.Product;
+using Pronia.Contracts.File;
+using Pronia.Contracts.Product;
+using Pronia.Database;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace First_For_Mvc_Project.Areas.Client.ViewComponents
+namespace Pronia.Areas.Client.ViewComponents
 {
     public class Product : ViewComponent
     {

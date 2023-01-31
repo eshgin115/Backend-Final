@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Database.Models
+﻿namespace Pronia.Database.Models
 {
     public class BlogTag
     {

@@ -1,8 +1,8 @@
-﻿using First_For_Mvc_Project.Database.Models;
+﻿using Pronia.Database.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace First_For_Mvc_Project.Database.Configurations
+namespace Pronia.Database.Configurations
 {
     public class ContactConfigurations : IEntityTypeConfiguration<Contact>
     {

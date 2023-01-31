@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Services.Concretes
+﻿namespace Pronia.Services.Concretes
 {
     public interface INotificationService
     {

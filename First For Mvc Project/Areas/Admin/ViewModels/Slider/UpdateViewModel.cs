@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.Slider
+﻿namespace Pronia.Areas.Admin.ViewModels.Slider
 {
     public class UpdateViewModel
     {

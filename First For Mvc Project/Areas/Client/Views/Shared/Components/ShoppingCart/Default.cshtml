@@ -1,4 +1,4 @@
-﻿@using First_For_Mvc_Project.Areas.Client.ViewModels.Basket
+﻿@using Pronia.Areas.Client.ViewModels.Basket
 
 @model List<ProductCookieViewModel>
 
@@ -62,13 +62,13 @@
         <td class="product-size">
             <a  asp-route="client-basket-addbymodal" asp-route-id="@item.Id">
             </a>
-            <select class="add-size-to-basket-btn-order" asp-for="@item.SizeId" asp-items="@(new SelectList(item.Sizes, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Size.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Size.ListViewModel.Name)))" class="form-select">
+            <select class="add-size-to-basket-btn-order" asp-for="@item.SizeId" asp-items="@(new SelectList(item.Sizes, nameof(Pronia.Areas.Admin.ViewModels.Size.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Size.ListViewModel.Name)))" class="form-select">
             </select>
         </td>
         <td class="product-color">
              <a  asp-route="client-basket-addbymodal" asp-route-id="@item.Id">
             </a>
-            <select class="add-color-to-basket-btn-order" asp-for="@item.ColorId" asp-items="@(new SelectList(item.Colors, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Color.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Color.ListViewModel.Name)))" class="form-select">
+            <select class="add-color-to-basket-btn-order" asp-for="@item.ColorId" asp-items="@(new SelectList(item.Colors, nameof(Pronia.Areas.Admin.ViewModels.Color.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Color.ListViewModel.Name)))" class="form-select">
             </select>
 
         </td>

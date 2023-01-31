@@ -1,11 +1,11 @@
-﻿using First_For_Mvc_Project.Areas.Admin.ViewModels.FeedBack;
-using First_For_Mvc_Project.Contracts.File;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Admin.ViewModels.FeedBack;
+using Pronia.Contracts.File;
+using Pronia.Database;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Areas.Client.ViewComponents
+namespace Pronia.Areas.Client.ViewComponents
 {
     public class FeedBack : ViewComponent
     {

@@ -1,9 +1,9 @@
-﻿using First_For_Mvc_Project.Database.Models;
-using First_For_Mvc_Project.Database.Models.Common;
-using First_For_Mvc_Project.Extensions;
+﻿using Pronia.Database.Models;
+using Pronia.Database.Models.Common;
+using Pronia.Extensions;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Database
+namespace Pronia.Database
 {
     public partial class DataContext:DbContext
     {

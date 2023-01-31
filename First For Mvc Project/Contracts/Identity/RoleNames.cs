@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Contracts.Identity
+﻿namespace Pronia.Contracts.Identity
 {
     public class RoleNames
     {

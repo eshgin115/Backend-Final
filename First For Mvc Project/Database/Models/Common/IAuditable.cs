@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Database.Models.Common
+﻿namespace Pronia.Database.Models.Common
 {
     public interface IAuditable
     {

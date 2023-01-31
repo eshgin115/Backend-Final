@@ -1,11 +1,11 @@
-﻿using First_For_Mvc_Project.Contracts.Email;
-using First_For_Mvc_Project.Options;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Contracts.Email;
+using Pronia.Options;
+using Pronia.Services.Concretes;
 using MailKit.Net.Smtp;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
-namespace First_For_Mvc_Project.Services.Services
+namespace Pronia.Services.Services
 {
     public class SMTPService : IEmailService
     {

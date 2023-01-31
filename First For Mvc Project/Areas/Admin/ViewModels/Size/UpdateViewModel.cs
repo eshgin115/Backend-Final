@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.Size
+﻿namespace Pronia.Areas.Admin.ViewModels.Size
 {
     public class UpdateViewModel
     {

@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Client.ViewModels.Basket
+﻿namespace Pronia.Areas.Client.ViewModels.Basket
 {
     public class ProductCookieViewModel
     {

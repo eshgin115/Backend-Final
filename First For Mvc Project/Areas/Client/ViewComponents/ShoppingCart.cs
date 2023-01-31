@@ -1,13 +1,13 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Basket;
-using First_For_Mvc_Project.Contracts.File;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewModels.Basket;
+using Pronia.Contracts.File;
+using Pronia.Database;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text.Json;
 
-namespace First_For_Mvc_Project.Areas.Client.ViewComponents
+namespace Pronia.Areas.Client.ViewComponents
 {
     public class ShoppingCart : ViewComponent
     {

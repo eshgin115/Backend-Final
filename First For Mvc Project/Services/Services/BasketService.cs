@@ -1,13 +1,13 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Basket;
-using First_For_Mvc_Project.Areas.Client.ViewModels.Product;
-using First_For_Mvc_Project.Contracts.File;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Database.Models;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewModels.Basket;
+using Pronia.Areas.Client.ViewModels.Product;
+using Pronia.Contracts.File;
+using Pronia.Database;
+using Pronia.Database.Models;
+using Pronia.Services.Concretes;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
-namespace First_For_Mvc_Project.Services.Services
+namespace Pronia.Services.Services
 {
     public class BasketService : IBasketService
     {

@@ -12,22 +12,22 @@
 
                         <div class="form-group">
                             <label>TagIds</label>
-                            <select asp-for="TagIds" asp-items="@(new SelectList(Model.Tags, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Tag.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Tag.ListViewModel.Name)))" class="form-select">                            </select>
+                            <select asp-for="TagIds" asp-items="@(new SelectList(Model.Tags, nameof(Pronia.Areas.Admin.ViewModels.Tag.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Tag.ListViewModel.Name)))" class="form-select">                            </select>
                             <span asp-validation-for="TagIds" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label>ColorIds</label>
-                            <select asp-for="ColorIds" asp-items="@(new SelectList(Model.Colors, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Color.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Color.ListViewModel.Name)))" class="form-select">                            </select>
+                            <select asp-for="ColorIds" asp-items="@(new SelectList(Model.Colors, nameof(Pronia.Areas.Admin.ViewModels.Color.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Color.ListViewModel.Name)))" class="form-select">                            </select>
                             <span asp-validation-for="ColorIds" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label>SizeIds</label>
-                            <select asp-for="SizeIds" asp-items="@(new SelectList(Model.Sizes, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Size.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Size.ListViewModel.Name)))" class="form-select">                            </select>
+                            <select asp-for="SizeIds" asp-items="@(new SelectList(Model.Sizes, nameof(Pronia.Areas.Admin.ViewModels.Size.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Size.ListViewModel.Name)))" class="form-select">                            </select>
                             <span asp-validation-for="SizeIds" class="text-danger"></span>
                         </div>
                          <div class="form-group">
                             <label>Subcategory</label>
-                            <select asp-for="SubcategoryId" asp-items="@(new SelectList(Model.Subcategories, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Subcategory.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Subcategory.ListViewModel.Name)))" class="form-select">                            </select>
+                            <select asp-for="SubcategoryId" asp-items="@(new SelectList(Model.Subcategories, nameof(Pronia.Areas.Admin.ViewModels.Subcategory.ListViewModel.Id), nameof(Pronia.Areas.Admin.ViewModels.Subcategory.ListViewModel.Name)))" class="form-select">                            </select>
                             <span asp-validation-for="SubcategoryId" class="text-danger"></span>
                         </div>
                         <div class="form-group">

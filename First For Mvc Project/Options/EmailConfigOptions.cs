@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Options
+﻿namespace Pronia.Options
 {
     public class EmailConfigOptions
     {

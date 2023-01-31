@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.FeedBack
+﻿namespace Pronia.Areas.Admin.ViewModels.FeedBack
 {
     public class ListViewModel
     {

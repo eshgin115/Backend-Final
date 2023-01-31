@@ -1,8 +1,8 @@
-﻿using First_For_Mvc_Project.Areas.Admin.Hubs;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Admin.Hubs;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.SignalR;
 
-namespace First_For_Mvc_Project.Services.Services
+namespace Pronia.Services.Services
 {
     public class NotificationService : INotificationService
     {

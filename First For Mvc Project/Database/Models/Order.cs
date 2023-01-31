@@ -1,7 +1,7 @@
-﻿using First_For_Mvc_Project.Contracts.Order;
-using First_For_Mvc_Project.Database.Models.Common;
+﻿using Pronia.Contracts.Order;
+using Pronia.Database.Models.Common;
 
-namespace First_For_Mvc_Project.Database.Models
+namespace Pronia.Database.Models
 {
     public class Order : BaseEntity<string>, IAuditable
     {

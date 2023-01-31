@@ -1,6 +1,6 @@
-using First_For_Mvc_Project.Infrastructure.Extensions;
+using Pronia.Infrastructure.Extensions;
 
-namespace First_For_Mvc_Project
+namespace Pronia
 {
     public class Program
     {

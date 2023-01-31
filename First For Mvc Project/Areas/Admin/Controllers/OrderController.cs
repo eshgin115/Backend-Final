@@ -1,13 +1,13 @@
 ﻿using DemoApplication.Areas.Admin.ViewModels.Order;
-using First_For_Mvc_Project.Areas.Admin.ViewModels.Order;
-using First_For_Mvc_Project.Contracts.Email;
-using First_For_Mvc_Project.Contracts.Order;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Services.Concretes;
+using Pronia.Areas.Admin.ViewModels.Order;
+using Pronia.Contracts.Email;
+using Pronia.Contracts.Order;
+using Pronia.Database;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Areas.Admin.Controllers
+namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("admin/order")]

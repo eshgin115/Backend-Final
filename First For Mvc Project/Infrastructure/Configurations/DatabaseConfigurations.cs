@@ -1,7 +1,7 @@
-﻿using First_For_Mvc_Project.Database;
+﻿using Pronia.Database;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Infrastructure.Configurations
+namespace Pronia.Infrastructure.Configurations
 {
     public static class DatabaseConfigurations
     {

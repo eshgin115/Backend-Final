@@ -1,17 +1,17 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Authentication;
-using First_For_Mvc_Project.Areas.Client.ViewModels.Basket;
-using First_For_Mvc_Project.Contracts.Identity;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Database.Models;
-using First_For_Mvc_Project.Exceptions;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewModels.Authentication;
+using Pronia.Areas.Client.ViewModels.Basket;
+using Pronia.Contracts.Identity;
+using Pronia.Database;
+using Pronia.Database.Models;
+using Pronia.Exceptions;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using System.Text.Json;
 
-namespace First_For_Mvc_Project.Services.Services
+namespace Pronia.Services.Services
 {
     public class UserService : IUserService
     {

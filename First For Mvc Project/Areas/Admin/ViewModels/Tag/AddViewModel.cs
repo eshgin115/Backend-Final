@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.Tag
+﻿namespace Pronia.Areas.Admin.ViewModels.Tag
 {
     public class AddViewModel
     {

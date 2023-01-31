@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace First_For_Mvc_Project.Migrations
+namespace Pronia.Migrations
 {
     public partial class Blog_name : Migration
     {

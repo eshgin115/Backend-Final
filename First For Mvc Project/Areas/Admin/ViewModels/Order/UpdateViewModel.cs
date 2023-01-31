@@ -1,4 +1,4 @@
-﻿using First_For_Mvc_Project.Contracts.Order;
+﻿using Pronia.Contracts.Order;
 
 namespace DemoApplication.Areas.Admin.ViewModels.Order
 {

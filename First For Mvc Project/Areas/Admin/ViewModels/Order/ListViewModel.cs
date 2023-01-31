@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.Order
+﻿namespace Pronia.Areas.Admin.ViewModels.Order
 {
     public class ListViewModel
     {

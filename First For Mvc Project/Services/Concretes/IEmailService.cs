@@ -1,6 +1,6 @@
-﻿using First_For_Mvc_Project.Contracts.Email;
+﻿using Pronia.Contracts.Email;
 
-namespace First_For_Mvc_Project.Services.Concretes
+namespace Pronia.Services.Concretes
 {
     public interface IEmailService
     {

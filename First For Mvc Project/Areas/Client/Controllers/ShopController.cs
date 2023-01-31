@@ -1,11 +1,11 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewComponents;
-using First_For_Mvc_Project.Areas.Client.ViewModels.Shop;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewComponents;
+using Pronia.Areas.Client.ViewModels.Shop;
+using Pronia.Database;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Areas.Client.Controllers
+namespace Pronia.Areas.Client.Controllers
 {
     [Area("client")]
     [Route("shop")]

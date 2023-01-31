@@ -1,10 +1,10 @@
-﻿using First_For_Mvc_Project.Contracts.Email;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Database.Models;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Contracts.Email;
+using Pronia.Database;
+using Pronia.Database.Models;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 
-namespace First_For_Mvc_Project.Services.Services
+namespace Pronia.Services.Services
 {
     public class UserActivationService : IUserActivationService
     {

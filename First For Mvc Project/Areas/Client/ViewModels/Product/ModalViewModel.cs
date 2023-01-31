@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Client.ViewModels.Product
+﻿namespace Pronia.Areas.Client.ViewModels.Product
 {
     public class ModalViewModel
     {

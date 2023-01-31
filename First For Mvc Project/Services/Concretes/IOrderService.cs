@@ -1,7 +1,7 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Shopping;
-using First_For_Mvc_Project.Database.Models;
+﻿using Pronia.Areas.Client.ViewModels.Shopping;
+using Pronia.Database.Models;
 
-namespace First_For_Mvc_Project.Services.Concretes
+namespace Pronia.Services.Concretes
 {
     public interface IOrderService
     {

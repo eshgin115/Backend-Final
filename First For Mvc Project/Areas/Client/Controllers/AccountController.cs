@@ -1,13 +1,13 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Account;
-using First_For_Mvc_Project.Contracts.Order;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Database.Models;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewModels.Account;
+using Pronia.Contracts.Order;
+using Pronia.Database;
+using Pronia.Database.Models;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Areas.Client.Controllers
+namespace Pronia.Areas.Client.Controllers
 {
     [Area("client")]
     [Route("account")]

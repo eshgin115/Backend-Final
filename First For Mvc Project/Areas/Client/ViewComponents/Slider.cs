@@ -1,11 +1,11 @@
-﻿using First_For_Mvc_Project.Areas.Client.ViewModels.Slider;
-using First_For_Mvc_Project.Contracts.File;
-using First_For_Mvc_Project.Database;
-using First_For_Mvc_Project.Services.Concretes;
+﻿using Pronia.Areas.Client.ViewModels.Slider;
+using Pronia.Contracts.File;
+using Pronia.Database;
+using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Areas.Client.ViewComponents
+namespace Pronia.Areas.Client.ViewComponents
 {
     public class Slider : ViewComponent
     {

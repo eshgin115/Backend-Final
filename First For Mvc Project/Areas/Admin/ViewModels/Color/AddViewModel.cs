@@ -1,4 +1,4 @@
-﻿namespace First_For_Mvc_Project.Areas.Admin.ViewModels.Color
+﻿namespace Pronia.Areas.Admin.ViewModels.Color
 {
     public class AddViewModel
     {

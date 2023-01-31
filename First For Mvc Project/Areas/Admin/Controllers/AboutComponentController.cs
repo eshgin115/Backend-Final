@@ -1,9 +1,9 @@
-﻿using First_For_Mvc_Project.Areas.Admin.ViewModels.AboutComponent;
-using First_For_Mvc_Project.Database;
+﻿using Pronia.Areas.Admin.ViewModels.AboutComponent;
+using Pronia.Database;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace First_For_Mvc_Project.Areas.Admin.Controllers
+namespace Pronia.Areas.Admin.Controllers
 {
 
     [Area("admin")]
