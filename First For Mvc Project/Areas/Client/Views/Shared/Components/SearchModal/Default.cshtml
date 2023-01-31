@@ -1,0 +1,22 @@
+﻿@using First_For_Mvc_Project.Areas.Client.ViewModels.Shop
+@model ListViewModel
+
+<div class="modal-body">
+    <div class="modal-search">
+        <span class="searchbox-info">
+            Start typing and press Enter to search or ESC to
+            close
+        </span>
+        <form method="GET" asp-route="client-shop-index" class="hm-searchbox">
+            <input asp-for="SearchQuery" type="text"
+                   onblur="if(this.value==''){this.value='Search...'}"
+                   onfocus="if(this.value=='Search...'){this.value=''}"
+                   autocomplete="off" />
+            <button class="search-btn"
+                    type="submit"
+                    aria-label="searchbtn">
+                <i class="pe-7s-search"></i>
+            </button>
+        </form>
+    </div>
+</div>

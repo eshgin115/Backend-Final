@@ -1,0 +1,76 @@
+﻿@using First_For_Mvc_Project.Areas.Client.ViewModels.Basket
+
+@model List<ProductCookieViewModel>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td class="product_remove">
+
+
+            <a class="client-shopping-cart-delete-all" asp-route="client-shopping-cart-delete" asp-route-id="@item.Id">
+                <i class="pe-7s-close"
+               data-tippy="Remove"
+               data-tippy-inertia="true"
+               data-tippy-animation="shift-away"
+               data-tippy-delay="50"
+               data-tippy-arrow="true"
+               data-tippy-theme="sharpborder"></i>
+            </a>
+            <a asp-route="client-shopping-basket-update">
+            </a>
+
+        </td>
+        <td class="product-thumbnail">
+            <a href="#">
+
+                <img style="width:20%;" src="~/@item.ImageUrl" alt="Cart Thumbnail">
+            </a>
+        </td>
+        <td class="product-name">
+            <a href="#">@item.Title</a>
+        </td>
+
+        <td class="product-price">
+            <span class="amount">$@item.Price</span>
+        </td>
+        <td class="quantity">
+            <div class="cart-plus-minus">
+
+                <div class="inc qtybutton">
+                    <div class="row">
+                        <a style="margin-left:40px;margin-bottom:10px" class="add-product-to-basket-btn-order" asp-route="client-basket-addbymodal" asp-route-id="@item.Id">
+                            <i class="fa fa-plus "></i>
+                        </a>
+                        <a asp-route="client-shopping-basket-update">
+                        </a>
+                       
+                        <a style="margin-left:40px;margin-top:10px" class="client-shopping-cart-delete-indivudual1" asp-route="client-shopping-cart-delete-indivudual" asp-route-id="@item.Id">
+                            <i class="fa fa-minus "></i>
+                        </a>
+                        <a asp-route="client-shopping-basket-update">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </td>
+
+        <td class="product-subtotal">
+            <span class="amount">@item.Total</span>
+        </td>
+        <td class="product-size">
+            <a  asp-route="client-basket-addbymodal" asp-route-id="@item.Id">
+            </a>
+            <select class="add-size-to-basket-btn-order" asp-for="@item.SizeId" asp-items="@(new SelectList(item.Sizes, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Size.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Size.ListViewModel.Name)))" class="form-select">
+            </select>
+        </td>
+        <td class="product-color">
+             <a  asp-route="client-basket-addbymodal" asp-route-id="@item.Id">
+            </a>
+            <select class="add-color-to-basket-btn-order" asp-for="@item.ColorId" asp-items="@(new SelectList(item.Colors, nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Color.ListViewModel.Id), nameof(First_For_Mvc_Project.Areas.Admin.ViewModels.Color.ListViewModel.Name)))" class="form-select">
+            </select>
+
+        </td>
+    </tr>
+}

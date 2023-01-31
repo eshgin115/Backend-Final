@@ -1,0 +1,25 @@
+﻿@using First_For_Mvc_Project.Areas.Admin.ViewModels.PaymentBenefits
+
+
+
+@model List<ListViewModel>
+
+
+
+@foreach (var paymentbenefits in Model)
+{
+    <div class="col-lg-4 col-md-6">
+        <ul class="service-item-wrap pb-0">
+        </ul>
+        <div class="shipping-item">
+            <div class="shipping-img">
+
+                <img src="~/@paymentbenefits.ImageURL" alt="shipping icon">
+            </div>
+            <div class="shipping-content">
+                <h2 class="title">@paymentbenefits.Title</h2>
+                <p class="short-desc mb-0">@paymentbenefits.Title</p>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,72 @@
+﻿@using First_For_Mvc_Project.Areas.Client.ViewModels.Account
+@model ContactViewModel
+
+<div class="contact-wrap">
+    <div class="contact-info text-white"
+         data-bg-image="assets/images/contact/1-1-370x500.jpg">
+        <h2 class="contact-title">Contact Info:</h2>
+        <p class="contact-desc">
+            Fill the form amd our teaam will get to back to you within
+            24 hours.
+        </p>
+        <ul class="contact-list">
+            <li>
+                <i class="pe-7s-call"></i>
+                <a href="tel://123-456-789">123 456 789</a>
+            </li>
+            <li>
+                <i class="pe-7s-mail"></i>
+                <a href="mailto://info@example.com">info@example.com</a>
+            </li>
+            <li>
+                <i class="pe-7s-map-marker"></i>
+                <span>13, Your Address, Here</span>
+            </li>
+        </ul>
+    </div>
+    <form method="POST" asp-route="client-account-contact-add" id="contact-form"
+          class="contact-form">
+        <div class="group-input">
+            <div class="form-field me-lg-30 mb-35 mb-lg-0">
+                <input asp-for="FirstName" type="text"
+                       placeholder="First Name*"
+                       class="input-field" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+
+            </div>
+            <div class="form-field mb-35">
+                <input asp-for="LastName" type="text"
+                       placeholder="Last Name*"
+                       class="input-field" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="group-input mb-35">
+            <div class="form-field me-lg-30 mb-35 mb-lg-0">
+                <input asp-for="Phone" type="text"
+                       placeholder="Phone*"
+                       class="input-field" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-field">
+                <input asp-for="Email" type="text"
+                       placeholder="Email*"
+                       class="input-field" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-field mb-5">
+            <textarea asp-for="Message" 
+                      placeholder="Message"
+                      class="textarea-field"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+        <div class="contact-button-wrap">
+            <button type="submit"
+                    class="btn btn btn-custom-size xl-size btn-pronia-primary">
+                Post Comment
+            </button>
+        </div>
+        <p class="form-message mt-3 mb-0"></p>
+    </form>
+</div>

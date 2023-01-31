@@ -1,0 +1,21 @@
+﻿@using First_For_Mvc_Project.Areas.Client.ViewModels.Navbar
+
+@model List<ListViewModel>
+
+<ul>
+    @foreach (var navbar in Model)
+    {
+        <li class="drop-holder">
+            <a href="@navbar.URL">@navbar.Name</a>
+            <ul class="drop-menu">
+
+                @foreach (var subnavbar in @navbar.SubnavbarItems)
+                {
+                    <li>
+                        <a href="@subnavbar.ToURL">@subnavbar.Name</a>
+                    </li>
+                }
+            </ul>
+        </li>
+    }
+</ul>

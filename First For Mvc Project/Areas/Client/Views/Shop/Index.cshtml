@@ -1,0 +1,130 @@
+﻿@using First_For_Mvc_Project.Areas.Client.ViewComponents
+@using First_For_Mvc_Project.Areas.Client.ViewModels.Shop;
+@model ListViewModel
+
+<div class="shop-area section-space-y-axis-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 order-2 order-lg-1 pt-5 pt-lg-0">
+                <div class="sidebar-area">
+                    <div class="widgets-searchbox">
+                        <input asp-for="SearchQuery" class="input-field"
+                               type="text" />
+                        <a class="widgets-searchbox-btn productBySearchQuery" asp-route="client-shop-search">
+                            <i class="fa fa-search"></i>
+                        </a>
+
+                    </div>
+                    <div class="widgets-area">
+                        <div class="widgets-item pt-0">
+                            <h2 class="widgets-title mb-4">Subcategories</h2>
+                            <ul class="widgets-category">
+                                <a asp-route="client-shop-index">
+                                    <i class="fa fa-chevron-right"></i>
+                                    All <span>(@Model.Subcategories.Count)</span>
+                                </a>
+
+                                @foreach (var item in Model.Subcategories)
+                                {
+                                    <li>
+                                        <span class="d-none">@item.Id</span>
+                                        <a class="search-productBySubcategoryId" asp-route="client-shop-search" asp-route-SubcategoryId="@item.Id">
+                                            <i class="fa fa-chevron-right"></i>
+                                            @item.Name
+
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="widgets-item">
+                            <h2 class="widgets-title mb-4">Color</h2>
+                            <ul class="widgets-category widgets-color">
+                                @foreach (var item in @Model.Colors)
+                                {
+                                    <li>
+                                        <span class="d-none">@item.Id</span>
+                                        <a class="search-productByColorId" asp-route="client-shop-search" asp-route-ColorId="@item.Id">
+                                            <i class="fa fa-chevron-right"></i>
+                                            @item.Name <span>(10)</span>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="widgets-item widgets-filter">
+                            <h2 class="widgets-title mb-4">Price Filter</h2>
+                            <div class="price-filter">
+                                <input type="text"
+                                       class="pronia-range-slider  searchProductByPrice"
+                                       name="pronia-range-slider"
+                                       value=""
+                                       data-type="double"
+                                       data-min="16"
+                                       data-from="16"
+                                       data-to="300"
+                                       data-max="350"
+                                       data-grid="false" />
+                            </div>
+                        </div>
+                        <div class="widgets-item">
+                            <h2 class="widgets-title mb-4">Populer Tags</h2>
+                            <ul class="widgets-tag">
+                                @foreach (var item in @Model.Tags)
+                                {
+                                    <li>
+                                        <span class="d-none">@item.Id</span>
+                                        <a class="search-productByTagId" asp-route="client-shop-search" asp-route-TagId="@item.Id">@item.Name</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="banner-item widgets-banner img-hover-effect">
+                        <div class="banner-img">
+                            <img src="assets/images/website-images/1-270x300.webp"
+                                 alt="Banner Image" />
+                        </div>
+                        <div class="banner-content text-position-center">
+                            <span class="collection">New Collection</span>
+                            <h3 class="title">Plant Port</h3>
+                            <div class="button-wrap">
+                                <a class="btn btn-custom-size sm-size btn-pronia-primary"
+                                   href="#">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-xl-9 col-lg-8 order-1 order-lg-2 ">
+
+                <div class="col-lg-12">
+                    <div class="swiper-container product-slider">
+                        <div class="swiper-wrapper FilterSlider">
+
+
+                            @await Component.InvokeAsync(nameof(Product),new{searchQuery=@Model.SearchQuery});
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>                                                                                                              
