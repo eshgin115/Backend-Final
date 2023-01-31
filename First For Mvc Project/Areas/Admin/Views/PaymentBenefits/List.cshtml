@@ -1,0 +1,53 @@
+﻿@using First_For_Mvc_Project.Areas.Admin.ViewModels.PaymentBenefits
+
+@model List<ListViewModel>
+
+<div class="col-lg-12">
+    <div class="row justify-content-end">
+        <div class="">
+            <a asp-controller="book" asp-action="add" target="_blank" class="btn btn-secondary">Add new book</a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Books</h4>
+        </div><!--end card-header-->
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+
+                        <tr>
+                            <th scope="col">@Html.DisplayNameFor(p=>p.GetEnumerator().Current.Content)</th>
+                            <th scope="col">@Html.DisplayNameFor(p=>p.GetEnumerator().Current.Order)</th>
+                            <th scope="col">@Html.DisplayNameFor(p=>p.GetEnumerator().Current.Title)</th>
+                            <th scope="col">@Html.DisplayNameFor(p=>p.GetEnumerator().Current.ImageURL)</th>
+
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var paymentBenefits in Model)
+                        {
+                            <tr>
+                                <td>@paymentBenefits.Content</td>
+                                <td>@paymentBenefits.Order</td>
+                                <td>@paymentBenefits.Title</td>
+                                <td> <img src="~/@paymentBenefits.ImageURL" width="20%"></td>
+                                <td class="text-end">
+                                    <a asp-route="admin-paymentBenefits-update" asp-route-id="@paymentBenefits.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <form method="POST" asp-route="admin-lider-delete" asp-route-id="@paymentBenefits.Id" id="book-form-@paymentBenefits.Id"></form>
+                                    <button type="submit" form="book-form-@paymentBenefits.Id">
+                                        <i class="las la-trash-alt text-secondary font-16"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table><!--end /table-->
+            </div><!--end /tableresponsive-->
+        </div><!--end card-body-->
+    </div><!--end card-->
+</div>

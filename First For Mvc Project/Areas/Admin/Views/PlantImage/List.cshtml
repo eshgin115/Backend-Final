@@ -1,0 +1,62 @@
+﻿@model BlogImagesViewModel
+
+<div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <div class="float-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a asp-route="admin-plant-list">plants</a>
+                        </li><!--end nav-item-->
+                        <li class="breadcrumb-item active">plant image</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">plants</h4>
+            </div><!--end page-title-box-->
+        </div><!--end col-->
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="row justify-content-end">
+        <div class="">
+            <a asp-route="admin-plant-image-add" asp-route-plantId="@Model.PlantId"  target="_blank" class="btn btn-secondary">Add new plant image</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Created at</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var plantImage in Model.Images!)
+                        {
+                            <tr>
+                                <td><img src="~/@plantImage.ImageUrL" width="20%" /></td>
+                                  <td>@plantImage.Order</td>
+                                <td>@plantImage.CreatedAt.ToString("dd/MM/yyyy")</td>
+                                <td class="text-end">
+                                    <a asp-route="admin-plant-image-update" asp-route-id="@plantImage.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <form method="POST" asp-route="admin-plant-image-delete" asp-route-plantId="@Model.PlantId" asp-route-plantImageId="@plantImage.Id" id="plant-image-form-@plantImage.Id"></form>
+                                    <button type="submit" form="plant-image-form-@plantImage.Id">
+                                        <i class="las la-trash-alt text-secondary font-16"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table><!--end /table-->
+            </div><!--end /tableresponsive-->
+        </div><!--end card-body-->
+    </div><!--end card-->
+</div>

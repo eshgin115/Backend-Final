@@ -1,0 +1,61 @@
+﻿@model List<ListViewModel>
+
+<div class="col-lg-12">
+    <div class="row justify-content-end">
+        <div class="">
+            <a asp-controller="plant" asp-action="add" target="_blank" class="btn btn-secondary">Add new plant</a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">plants</h4>
+        </div><!--end card-header-->
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Content</th>
+                            <th>Tags</th>
+                            <th>Sizes</th>
+                            <th>Colors</th>
+                            <th>CreatedAt</th>
+                            <th>UpdatedAt</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var plant in Model)
+                        {
+                            <tr>
+                                <td>@plant.Title</td>
+                                <td>@plant.Price</td>
+                                <td>@plant.Category</td>
+                                <td>@plant.Content</td>
+                                @*<td>@plant.</td>*@
+                                <td>@string.Join(", ", plant.Tags.Select(t => t.Name))</td>
+                                <td>@string.Join(", ", plant.Sizes.Select(s => s.Name))</td>
+                                <td>@string.Join(", ", plant.Colors.Select(c => c.Name))</td>
+                                <td>@plant.CreatedAt.ToString("dd/MM/yyyy")</td>
+                                <td>@plant.UpdatedAt.ToString("dd/MM/yyyy")</td>
+                                <td class="text-end">
+                                    <a asp-route="admin-plant-update" asp-route-id="@plant.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <form method="POST" asp-route="admin-plant-delete" asp-route-id="@plant.Id" id="plant-form-@plant.Id"></form>
+                                    <button type="submit" form="plant-form-@plant.Id">
+                                        <i class="las la-trash-alt text-secondary font-16"></i>
+                                    </button>
+                                    <a asp-route="admin-plant-image-list" asp-route-plantId="@plant.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table><!--end /table-->
+            </div><!--end /tableresponsive-->
+        </div><!--end card-body-->
+    </div><!--end card-->
+</div>

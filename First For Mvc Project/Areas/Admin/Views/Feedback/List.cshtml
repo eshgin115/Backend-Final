@@ -1,0 +1,48 @@
+﻿@model List<ListViewModel>
+
+<div class="col-lg-12">
+    <div class="row justify-content-end">
+        <div class="">
+            <a asp-route="admin-feedback-add" class="btn btn-secondary">Add new feedback</a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Books</h4>
+        </div><!--end card-header-->
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>User Profile</th>
+                            <th>User Name</th>
+                            <th>User Role</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var feedback in Model)
+                        {
+                            <tr>
+                                <td> <img src="~/@feedback.ProfilePhotoUrl" width="10%"> </td>
+                                <td>@feedback.FullName</td>
+                                <td>@feedback.RoleName</td>
+                                <td>@feedback.CreatedAt</td>
+                                <td class="text-end">
+                                    <a asp-route="admin-feedback-update" asp-route-id="@feedback.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <form method="POST" asp-route="admin-feedback-delete" asp-route-id="@feedback.Id" id="fedback-form-@feedback.Id"></form>
+                                    <button type="submit" form="fedback-form-@feedback.Id">
+                                        <i class="las la-trash-alt text-secondary font-16"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table><!--end /table-->
+            </div><!--end /tableresponsive-->
+        </div><!--end card-body-->
+    </div><!--end card-->
+</div>
