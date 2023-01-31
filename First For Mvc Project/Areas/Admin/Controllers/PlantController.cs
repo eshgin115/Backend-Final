@@ -6,11 +6,13 @@ using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("plant")]
+    [Authorize]
     public class PlantController : Controller
     {
         private readonly DataContext _dataContext;

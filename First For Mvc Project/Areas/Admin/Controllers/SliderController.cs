@@ -5,11 +5,13 @@ using Pronia.Database.Models;
 using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("slider")]
+    [Authorize]
     public class SliderController : Controller
     {
         private readonly DataContext _dataContext;

@@ -2,12 +2,14 @@
 using Pronia.Database;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Pronia.Areas.Admin.Controllers
 {
 
     [Area("admin")]
     [Route("AboutComponent")]
+    [Authorize]
     public class AboutComponentController : Controller
     {
         private readonly DataContext _dataContext;

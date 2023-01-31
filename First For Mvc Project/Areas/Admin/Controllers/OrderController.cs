@@ -6,11 +6,13 @@ using Pronia.Database;
 using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("admin/order")]
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly DataContext _dbContext;

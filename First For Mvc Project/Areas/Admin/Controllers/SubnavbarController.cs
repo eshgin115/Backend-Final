@@ -3,11 +3,13 @@ using Pronia.Database;
 using Pronia.Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("subnavbar")]
+    [Authorize]
     public class SubnavbarController : Controller
     {
 

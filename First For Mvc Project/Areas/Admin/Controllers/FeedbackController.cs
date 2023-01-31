@@ -5,12 +5,14 @@ using Pronia.Database.Models;
 using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Pronia.Areas.Admin.Controllers
 {
 
     [Area("admin")]
     [Route("feedback")]
+    [Authorize]
     public class FeedbackController : Controller
     {
         private readonly DataContext _dataContext;
