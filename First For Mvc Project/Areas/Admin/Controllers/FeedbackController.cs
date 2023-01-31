@@ -101,7 +101,7 @@ namespace Pronia.Areas.Admin.Controllers
                     Roles = await _dataContext.Roles.Select(r => new UpdateViewModel.ItemViewModel(r.Id, r.Name)).ToListAsync(),
 
                 };
-                return model
+                return model;
             }
         }
         [HttpPost("update/{id}", Name = "admin-feedback-update")]

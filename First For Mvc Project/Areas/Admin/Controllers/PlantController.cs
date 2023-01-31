@@ -47,7 +47,7 @@ namespace Pronia.Areas.Admin.Controllers
 
 
                          .ToListAsync();
-                return model
+                return model;
             };
         }
         [HttpGet("add", Name = "admin-plant-add")]

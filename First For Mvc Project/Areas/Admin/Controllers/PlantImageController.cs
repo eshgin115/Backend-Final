@@ -71,7 +71,7 @@ namespace Pronia.Areas.Admin.Controllers
 
             var imageNameInSystem = await _fileService.UploadAsync(model.Image, UploadDirectory.Plant);
 
-            var plantImage = CreatePlantImage()
+            var plantImage = CreatePlantImage();
 
             await _dataContext.PlantImages.AddAsync(plantImage);
 
