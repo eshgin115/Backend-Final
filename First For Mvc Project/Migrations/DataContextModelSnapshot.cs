@@ -210,11 +210,9 @@ namespace Pronia.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("VideoName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("VideoNameInFileSystem")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("VideoURLFromBrauser")

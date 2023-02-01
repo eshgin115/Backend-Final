@@ -44,7 +44,7 @@ namespace Pronia.Areas.Admin.Controllers
             {
                 Id = pi.Id,
                 VideoUrL = _fileService.GetFileUrl(pi.VideoNameInFileSystem, UploadDirectory.BlogVideo),
-                VideoURLFromBrauser=pi.VideoURLFromBrauser,
+                VideoURLFromBrauser = pi.VideoURLFromBrauser,
 
             }).ToList();
 
@@ -67,11 +67,13 @@ namespace Pronia.Areas.Admin.Controllers
             if (!ModelState.IsValid) return View(model);
 
             var blog = await _dataContext.Blogs.FirstOrDefaultAsync(b => b.Id == blogId);
-
+            var videoNameInSystem = string.Empty;
 
             if (blog is null) return NotFound();
 
-            var videoNameInSystem = await _fileService.UploadAsync(model.Video, UploadDirectory.BlogVideo);
+
+            if (model.Video is not null) videoNameInSystem = await _fileService.UploadAsync(model.Video, UploadDirectory.BlogVideo);
+
 
             var blogVideo = CreateBlogVideo();
 
@@ -87,9 +89,9 @@ namespace Pronia.Areas.Admin.Controllers
                 var blogVideo = new BlogVideo
                 {
                     Blog = blog,
-                    VideoName = model.Video.FileName,
+                    VideoName = model!.Video!.FileName! != null ? model!.Video!.FileName! : null!,
                     VideoNameInFileSystem = videoNameInSystem,
-                    VideoURLFromBrauser=model.VideoURLFromBrauser,
+                    VideoURLFromBrauser = model.VideoURLFromBrauser,
                 };
                 return blogVideo;
             };
@@ -111,7 +113,7 @@ namespace Pronia.Areas.Admin.Controllers
             var model = new UpdateViewModel
             {
                 VideoUrL = _fileService.GetFileUrl(blogVideo.VideoNameInFileSystem, UploadDirectory.BlogVideo),
-                VideoURLFromBrauser=blogVideo.VideoURLFromBrauser,
+                VideoURLFromBrauser = blogVideo.VideoURLFromBrauser,
             };
 
             return View(model);
