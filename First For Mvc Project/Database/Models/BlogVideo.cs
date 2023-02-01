@@ -10,6 +10,8 @@ namespace Pronia.Database.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
+        public string? VideoURLFromBrauser { get; set; }
+
         public int? BlogId { get; set; }
         public Blog? Blog { get; set; }
     }

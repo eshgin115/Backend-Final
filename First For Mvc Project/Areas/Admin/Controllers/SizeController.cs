@@ -4,12 +4,13 @@ using Pronia.Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Pronia.Contracts.Identity;
 
 namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("size")]
-    [Authorize]
+    [Authorize(Roles = RoleNames.ADMIN)]
     public class SizeController : Controller
     {
         private readonly DataContext _dataContext;

@@ -18,6 +18,7 @@
         public string Content { get; set; } = null!;
         public int? AdminId { get; set; }
         public string? AdminName { get; set; }
+
         public string VideoURL { get; set; }
         public List<ViewModels.Tag.ListViewModel>? Tags { get; set; }
     }

@@ -6,12 +6,13 @@ using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Pronia.Contracts.Identity;
 
 namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("admin/plants")]
-    [Authorize]
+    [Authorize(Roles = RoleNames.ADMIN)]
     public class PlantImageController : Controller
     {
 

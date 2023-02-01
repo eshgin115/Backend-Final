@@ -11,6 +11,7 @@ namespace Pronia.Database.Models
         public List<BlogTag>? BlogTags { get; set; }
         public List<BlogImage>? BlogImages { get; set; }
         public List<BlogVideo>? BlogVideos { get; set; }
+       
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

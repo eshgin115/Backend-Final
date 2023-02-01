@@ -21,7 +21,7 @@
 <div class="col-lg-12">
     <div class="row justify-content-end">
         <div class="">
-            <a asp-route="admin-blog-video-add" asp-route-blogId="@Model.BlogId"  target="_blank" class="btn btn-secondary">Add new blog video</a>
+            <a asp-route="admin-blog-video-add" asp-route-blogId="@Model.BlogId" target="_blank" class="btn btn-secondary">Add new blog video</a>
         </div>
     </div>
 </div>
@@ -33,6 +33,7 @@
                 <table class="table table-striped mb-0">
                     <thead>
                         <tr>
+                            <th>VideoURLFromBrauser</th>
                             <th>video</th>
                             <th>Created at</th>
                             <th class="text-end">Actions</th>
@@ -42,8 +43,9 @@
                         @foreach (var blogvideo in Model.videos!)
                         {
                             <tr>
+                                <td>@blogvideo.VideoURLFromBrauser</td>
                                 <td><img src="~/@blogvideo.VideoUrL" width="20%" /></td>
-                                  <td>@blogvideo.Order</td>
+                                <td>@blogvideo.Order</td>
                                 <td>@blogvideo.CreatedAt.ToString("dd/MM/yyyy")</td>
                                 <td class="text-end">
                                     <a asp-route="admin-blog-video-update" asp-route-id="@blogvideo.Id"><i class="las la-pen text-secondary font-16"></i></a>

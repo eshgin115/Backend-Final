@@ -7,5 +7,6 @@
         public string Content { get; set; } = null!;
         public List<ViewModels.Tag.ListViewModel>? Tags { get; set; }
         public List<int> TagIds { get; set; }
+   
     }
 }

@@ -11,6 +11,7 @@
 
         public class ListItem
         {
+            public string? VideoURLFromBrauser { get; set; }
             public int Id { get; set; }
             public string? VideoUrL { get; set; }
             public int? Order { get; set; }

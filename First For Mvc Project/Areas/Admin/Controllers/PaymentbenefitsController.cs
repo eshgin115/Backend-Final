@@ -6,13 +6,14 @@ using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Pronia.Contracts.Identity;
 
 namespace Pronia.Areas.Admin.Controllers
 {
 
     [Area("admin")]
     [Route("Paymentbenefits")]
-    [Authorize]
+    [Authorize(Roles = RoleNames.ADMIN)]
     public class PaymentbenefitsController : Controller
     {
         private readonly DataContext _dataContext;

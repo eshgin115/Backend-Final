@@ -1,0 +1,60 @@
+﻿@using First_For_Mvc_Project.Areas.Client.ViewModels.Blog
+@model List<ListItemViewModel>
+
+<div class="col-xl-9 col-lg-8 order-1">
+    <div class="blog-item-wrap row g-y-30">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6">
+                <div class="blog-item">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <ul>
+                                <li class="author">
+                                    <a href="#">By: @item.AdminName</a>
+                                </li>
+                                <li class="date">@item.CreatedAt.ToShortTimeString()</li>
+                            </ul>
+                        </div>
+                        <h2 class="title">
+                            <a href="blog-detail.html">There Many Variations</a>
+                        </h2>
+                        <p class="short-desc mb-7">
+                            @item.Content
+                        </p>
+                    </div>
+                    <div class="blog-img img-hover-effect">
+                        <a href="blog-detail.html">
+                            <img class="img-full"
+                             src="~/@item.MainImageUrl"
+                             alt="Blog Image" />
+                        </a>
+                        <div class="inner-btn-wrap">
+                            <a class="inner-btn" href="blog-detail.html">
+                                <i class="pe-7s-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="pagination-area">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

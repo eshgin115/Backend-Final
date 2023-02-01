@@ -6,12 +6,13 @@ using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Pronia.Contracts.Identity;
 
 namespace Pronia.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("admin/blogs")]
-    [Authorize]
+    [Authorize(Roles = RoleNames.ADMIN)]
     public class BlogVideoController : Controller
     {
         private readonly DataContext _dataContext;
@@ -43,6 +44,7 @@ namespace Pronia.Areas.Admin.Controllers
             {
                 Id = pi.Id,
                 VideoUrL = _fileService.GetFileUrl(pi.VideoNameInFileSystem, UploadDirectory.BlogVideo),
+                VideoURLFromBrauser=pi.VideoURLFromBrauser,
 
             }).ToList();
 
@@ -87,6 +89,7 @@ namespace Pronia.Areas.Admin.Controllers
                     Blog = blog,
                     VideoName = model.Video.FileName,
                     VideoNameInFileSystem = videoNameInSystem,
+                    VideoURLFromBrauser=model.VideoURLFromBrauser,
                 };
                 return blogVideo;
             };
@@ -108,6 +111,7 @@ namespace Pronia.Areas.Admin.Controllers
             var model = new UpdateViewModel
             {
                 VideoUrL = _fileService.GetFileUrl(blogVideo.VideoNameInFileSystem, UploadDirectory.BlogVideo),
+                VideoURLFromBrauser=blogVideo.VideoURLFromBrauser,
             };
 
             return View(model);
@@ -135,6 +139,7 @@ namespace Pronia.Areas.Admin.Controllers
                 var videoNameInSystem = await _fileService.UploadAsync(model.Video, UploadDirectory.BlogImage);
                 blogVideo.VideoNameInFileSystem = videoNameInSystem;
                 blogVideo.VideoName = model.Video.FileName;
+                blogVideo.VideoURLFromBrauser = model.VideoURLFromBrauser;
             }
         }
 
