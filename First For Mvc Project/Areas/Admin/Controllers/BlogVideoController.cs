@@ -67,7 +67,7 @@ namespace Pronia.Areas.Admin.Controllers
             if (!ModelState.IsValid) return View(model);
 
             var blog = await _dataContext.Blogs.FirstOrDefaultAsync(b => b.Id == blogId);
-            var videoNameInSystem = string.Empty;
+            string videoNameInSystem = null;
 
             if (blog is null) return NotFound();
 
@@ -75,7 +75,7 @@ namespace Pronia.Areas.Admin.Controllers
             if (model.Video is not null) videoNameInSystem = await _fileService.UploadAsync(model.Video, UploadDirectory.BlogVideo);
 
 
-            var blogVideo = CreateBlogVideo();
+            var blogVideo = CreateBlogVideo(videoNameInSystem);
 
             await _dataContext.BlogVideos.AddAsync(blogVideo);
 
@@ -84,12 +84,12 @@ namespace Pronia.Areas.Admin.Controllers
             return RedirectToRoute("admin-blog-video-list", new { blogId = blogId });
 
 
-            BlogVideo CreateBlogVideo()
+            BlogVideo CreateBlogVideo(string videoNameInSystem)
             {
                 var blogVideo = new BlogVideo
                 {
                     Blog = blog,
-                    VideoName = model!.Video!.FileName! != null ? model!.Video!.FileName! : null!,
+                    VideoName = model.Video != null ? model.Video.FileName : null,
                     VideoNameInFileSystem = videoNameInSystem,
                     VideoURLFromBrauser = model.VideoURLFromBrauser,
                 };
@@ -136,12 +136,18 @@ namespace Pronia.Areas.Admin.Controllers
 
             async Task UpdateVideoAsync()
             {
-                await _fileService.DeleteAsync(blogVideo.VideoNameInFileSystem, UploadDirectory.BlogVideo);
 
-                var videoNameInSystem = await _fileService.UploadAsync(model.Video, UploadDirectory.BlogImage);
-                blogVideo.VideoNameInFileSystem = videoNameInSystem;
-                blogVideo.VideoName = model.Video.FileName;
+                if (model.Video is not null) await _fileService.DeleteAsync(blogVideo.VideoNameInFileSystem, UploadDirectory.BlogVideo);
+
+                blogVideo.VideoNameInFileSystem = model.Video != null
+                    ? await _fileService.UploadAsync(model.Video, UploadDirectory.BlogVideo)
+                    : blogVideo.VideoNameInFileSystem;
+
+
+                blogVideo.VideoName = model.Video != null ? model.Video.FileName : blogVideo.VideoName;
+
                 blogVideo.VideoURLFromBrauser = model.VideoURLFromBrauser;
+
             }
         }
 
@@ -158,8 +164,7 @@ namespace Pronia.Areas.Admin.Controllers
 
 
             if (blogVideo is null) return NotFound();
-
-            await _fileService.DeleteAsync(blogVideo.VideoNameInFileSystem, UploadDirectory.BlogVideo);
+            if (blogVideo.VideoNameInFileSystem != null) await _fileService.DeleteAsync(blogVideo.VideoNameInFileSystem, UploadDirectory.BlogVideo);
 
             _dataContext.BlogVideos.Remove(blogVideo);
             await _dataContext.SaveChangesAsync();

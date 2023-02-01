@@ -48,7 +48,7 @@
                                 <td>@blogvideo.Order</td>
                                 <td>@blogvideo.CreatedAt.ToString("dd/MM/yyyy")</td>
                                 <td class="text-end">
-                                    <a asp-route="admin-blog-video-update" asp-route-id="@blogvideo.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a asp-route="admin-blog-video-update" asp-route-id="@blogvideo.Id" asp-route-blogVideoId="@blogvideo.Id"><i class="las la-pen text-secondary font-16"></i></a>
                                     <form method="POST" asp-route="admin-blog-video-delete" asp-route-blogId="@Model.BlogId" asp-route-blogVideoId="@blogvideo.Id" id="blog-video-form-@blogvideo.Id"></form>
                                     <button type="submit" form="blog-video-form-@blogvideo.Id">
                                         <i class="las la-trash-alt text-secondary font-16"></i>

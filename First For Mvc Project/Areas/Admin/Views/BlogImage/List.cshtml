@@ -45,7 +45,7 @@
                                 <td><img src="~/@blogImage.ImageUrL" width="20%" /></td>
                                 <td>@blogImage.CreatedAt.ToString("dd/MM/yyyy")</td>
                                 <td class="text-end">
-                                    <a asp-route="admin-blog-image-update" asp-route-id="@blogImage.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a asp-route="admin-blog-image-update" asp-route-id="@blogImage.Id" asp-route-blogImageId="@blogImage.Id"><i class="las la-pen text-secondary font-16"></i></a>
                                     <form method="POST" asp-route="admin-blog-image-delete" asp-route-blogId="@Model.BlogId" asp-route-blogImageId="@blogImage.Id" id="blog-image-form-@blogImage.Id"></form>
                                     <button type="submit" form="blog-image-form-@blogImage.Id">
                                         <i class="las la-trash-alt text-secondary font-16"></i>
