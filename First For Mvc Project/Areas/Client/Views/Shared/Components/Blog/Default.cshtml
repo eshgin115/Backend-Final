@@ -1,7 +1,6 @@
 ﻿@using First_For_Mvc_Project.Areas.Client.ViewModels.Blog
 @model List<ListItemViewModel>
 
-<div class="col-xl-9 col-lg-8 order-1">
     <div class="blog-item-wrap row g-y-30">
         @foreach (var item in Model)
         {
@@ -17,7 +16,7 @@
                             </ul>
                         </div>
                         <h2 class="title">
-                            <a href="blog-detail.html">There Many Variations</a>
+                            <a href="blog-detail.html">@item.Name</a>
                         </h2>
                         <p class="short-desc mb-7">
                             @item.Content
@@ -27,6 +26,11 @@
                         <a href="blog-detail.html">
                             <img class="img-full"
                              src="~/@item.MainImageUrl"
+                             alt="Blog Image" />
+                        </a>
+                          <a href="blog-detail.html">
+                            <img class="img-full"
+                             src="@item.VideoURL"
                              alt="Blog Image" />
                         </a>
                         <div class="inner-btn-wrap">
@@ -57,4 +61,3 @@
             </ul>
         </nav>
     </div>
-</div>

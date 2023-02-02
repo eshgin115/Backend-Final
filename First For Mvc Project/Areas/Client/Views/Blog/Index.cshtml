@@ -8,17 +8,14 @@
             <div class="col-xl-3 col-lg-4 order-2 pt-5 pt-lg-0">
                 <div class="sidebar-area">
                     <div class="widgets-searchbox">
-                        <form id="widgets-searchbox">
-                            <input class="input-field"
-                                   type="text"
-                                   placeholder="Search" />
-                            <button class="widgets-searchbox-btn" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </form>
+                        <input asp-for="SearchQuery" class="input-field"
+                               type="text" />
+                        <a class="widgets-searchbox-btn blogBySearchQuery" asp-route="client-blog-search">
+                            <i class="fa fa-search"></i>
+                        </a>
                     </div>
                     <div class="widgets-area">
-                        
+
                         <div class="widgets-item">
                             <h2 class="widgets-title mb-4">Recent Post</h2>
                             <div class="swiper-container widgets-list-slider">
@@ -113,28 +110,29 @@
                         <div class="widgets-item">
                             <h2 class="widgets-title mb-4">Populer Tags</h2>
                             <ul class="widgets-tag">
-                              
-                                 @foreach (var item in @Model.Tags)
+
+                                @foreach (var item in @Model.Tags)
                                 {
                                     <li>
                                         <span class="d-none">@item.Id</span>
-                                        <a class="search-productByTagId" asp-route="client-blog-search" asp-route-TagId="@item.Id">@item.Name</a>
+                                        <a class="search-blogByTagId" asp-route="client-blog-search" asp-route-TagId="@item.Id">@item.Name</a>
                                     </li>
                                 }
 
                             </ul>
                         </div>
                     </div>
-                  
+
                 </div>
             </div>
 
 
 
-                  @await Component.InvokeAsync(nameof(Blog),new{searchQuery=@Model.SearchQuery});
 
+            <div class="col-xl-9 col-lg-8 order-1 Filterblog">
+                @await Component.InvokeAsync(nameof(Blog),new{searchQuery=@Model.SearchQuery});
 
-
+            </div>
         </div>
     </div>
 </div>

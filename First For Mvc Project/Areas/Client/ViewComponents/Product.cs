@@ -28,7 +28,8 @@ namespace Pronia.Areas.Client.ViewComponents
             int? maxPrice = null)
         {
             var productsQuery = _dataContext.Plants.AsQueryable();
-            
+
+         
 
             if (slide == Manage.NEW_PRODUCT)
             {

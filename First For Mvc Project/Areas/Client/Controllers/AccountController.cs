@@ -6,6 +6,7 @@ using Pronia.Services.Concretes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Pronia.Contracts.Identity;
 
 namespace Pronia.Areas.Client.Controllers
 {
@@ -30,10 +31,11 @@ namespace Pronia.Areas.Client.Controllers
         public IActionResult UpdatePassword()
         {
 
-            return View();
+            return View(new UpdatePasswordViewModel());
         }
         [HttpPost("updatePassword", Name = "client-account-updatePassword")]
         public async Task<IActionResult> UpdatePassword(UpdatePasswordViewModel model)
+        
         {
             if (!ModelState.IsValid) return View(model);
 
