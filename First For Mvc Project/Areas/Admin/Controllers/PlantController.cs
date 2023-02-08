@@ -439,7 +439,7 @@ namespace Pronia.Areas.Admin.Controllers
         [HttpPost("delete/{id}", Name = "admin-plant-delete")]
         public async Task<IActionResult> DeleteAsync([FromRoute] int id)
         {
-            var plant = await _dataContext.Plants.FirstOrDefaultAsync(p => p.Id == id);
+            var plant = await _dataContext.Plants.Include(p => p.OrderProducts).FirstOrDefaultAsync(p => p.Id == id);
             if (plant is null)
             {
                 return NotFound();
@@ -447,6 +447,15 @@ namespace Pronia.Areas.Admin.Controllers
 
 
             _dataContext.Plants.Remove(plant);
+            if (plant.OrderProducts != null)
+            {
+                foreach (var item in plant.OrderProducts)
+                {
+                    _dataContext.OrderProducts.Remove(item);
+                }
+            }
+
+
             await _dataContext.SaveChangesAsync();
 
             return RedirectToRoute("admin-plant-list");
